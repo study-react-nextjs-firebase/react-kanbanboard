@@ -1,11 +1,11 @@
 // 
 
 
-function layout() {
+function layout({}) {
     return (
-        <div>
-            Enter
-        </div>
+        <>
+        <main>Layout</main>
+        </>
     );
 }
 
