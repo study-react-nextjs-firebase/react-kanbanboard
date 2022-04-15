@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styled from 'styled-components';
-import plusImage from "../../public/plus.svg";
+import plusImage from "/plus.svg";
 
 function AddTaskButton() {
     const AddTask = styled.div`

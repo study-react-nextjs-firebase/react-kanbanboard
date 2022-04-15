@@ -1,10 +1,11 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
+import styles from "./HeaderList.module.css";
+
 
 function HeaderList() {
     const Nav = styled.div`    
-    height:60px;
     align-items: center;
     `;
     const StyledUl = styled.ul `
@@ -28,21 +29,24 @@ function HeaderList() {
     &:active{
         padding-bottom: 8px;
         border-bottom: 2px solid #000;
-    }
-    `;
-
-    
+    }`;
 
     return (
-        
-        <Nav>
-        <StyledUl>
-            <StyledLi><StyledButton><Link href="/">リスト</Link></StyledButton></StyledLi>
-            <StyledLi><StyledButton><Link href="/">ボード</Link></StyledButton></StyledLi>
-            <StyledLi><StyledButton><Link href="/">カレンダー</Link></StyledButton></StyledLi>
-            <StyledLi><StyledButton><Link href="/">ファイル</Link></StyledButton></StyledLi>
-        </StyledUl>
-        </Nav>
+        <>
+            {/* P1 Module CSS Class Myprofileがあたらない */}
+            <div className={styles.ProfileOption}>
+            <Image src={"/myProfile.png"} className={styles.MyProfile} alt="" width={48} height={48} />
+            マイタスク
+            </div>
+            <Nav>
+            <StyledUl>
+                <StyledLi><StyledButton><Link href="/">リスト</Link></StyledButton></StyledLi>
+                <StyledLi><StyledButton><Link href="/">ボード</Link></StyledButton></StyledLi>
+                <StyledLi><StyledButton><Link href="/">カレンダー</Link></StyledButton></StyledLi>
+                <StyledLi><StyledButton><Link href="/">ファイル</Link></StyledButton></StyledLi>
+            </StyledUl>
+            </Nav>
+        </>
     );
 }
 

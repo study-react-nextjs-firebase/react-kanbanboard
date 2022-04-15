@@ -2,7 +2,7 @@ import styled from "styled-components";
 import plusImage from "../../public/plus.svg";
 import dotsImage from "../../public/dots.svg";
 import Image from "next/image";
-import styles from "./TaskTopic.module.css"
+import styles from "./TaskTopic.module.css";
 
 
 function TaskTopic(props) {
@@ -21,6 +21,7 @@ function TaskTopic(props) {
     return (
         <Outer>
             <InnerText>{props.topic}</InnerText>
+            {/* P2 Module CSS Class OptionImageのmarginが効かないから、以下2画像がギチギチ */}
             <Image className={styles.OptionImage} src={plusImage} alt="" width={16} height={16} />
             <Image className={styles.OptionImage} src={dotsImage} alt="" width={16} height={16} />
         </Outer>
